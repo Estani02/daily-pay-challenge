@@ -36,7 +36,7 @@ export const BallotClientPage = ({ ballots }: Props) => {
 
   return (
     <article className='flex flex-col gap-12'>
-      <div className='grid 2xl:grid-cols-2'>
+      <div className='grid 2xl:grid-cols-2 mb-16'>
         {ballots.map((ballot) => (
           <section className='flex flex-col items-center justify-center' key={ballot.id}>
             <h2 className='text-2xl font-semibold mt-8'>{ballot.title}</h2>
@@ -52,7 +52,7 @@ export const BallotClientPage = ({ ballots }: Props) => {
           </section>
         ))}
       </div>
-      <button className='font-bold py-2 px-5 text-white bg-[#3cd117dd] hover:bg-[#3cd11771] transition-colors duration-300 w-fit m-auto mb-9 rounded-3xl disabled:bg-[#4f6749dd] disabled:text-[#a19a9a]' disabled={!isVotingComplet} onClick={handleSubmit}>Submit Votes</button>
+      <button className='fixed bottom-0 left-0 right-0 font-bold py-2 px-5 text-white bg-[#3cd117dd] hover:bg-[#3cd11771] transition-colors duration-300 w-fit m-auto mb-5 rounded-3xl disabled:bg-[#4f6749dd] disabled:text-[#a19a9a]' disabled={!isVotingComplet} onClick={handleSubmit}>Submit Votes</button>
     </article>
   )
 }
